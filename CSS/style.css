@@ -1,0 +1,63 @@
+@font-face {
+	font-family: JMH Typewriter;
+    src: url("Fonts/JMH Typewriter.otf");
+    src: url("Fonts/JMH Typewriter.ttf");
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: JMH Typewriter;
+}
+header {
+    text-align: center;
+    background-color: #286d82;
+    color: #FFF;
+    padding: 40px;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+.calculator {
+    background-image: linear-gradient(to bottom, #286d82, #fff);
+    margin: 0 auto;
+    width: 350px;
+    height: 450px;
+    text-align: center;
+    border-radius: 8px;
+}
+.result {
+    width: 250px;
+    margin-top: 30px;
+    height: 50px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-align: right;
+}
+.keyboard {
+    margin-top: 38px;
+}
+.btn-ac , .btn-c {
+    width: 95px;
+    height: 50px;
+    background-color: #b41919;
+}
+.btn-is {
+    width: 142px;
+    height: 50px;
+    background-color: #378d21;
+}
+.btn {
+    width: 50px;
+    height: 50px;
+    background-color: #0084ff;
+    margin-top: 5px;
+}
+footer {
+    text-align: center;
+    background-color: #286d82;
+    color: #FFF;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

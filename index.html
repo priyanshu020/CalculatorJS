@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link href="CSS/style.css" rel="stylesheet">
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        <header>A Simple Calculator</header>
+
+        <div class="calculator">
+
+            <input type="text" id="result" class="result"><br>
+            
+            <div class="keyboard">
+                <button class="btn-ac" onclick="getInput('AC')">AC</button>
+                <button class="btn-c" onclick="getInput('')">C</button>
+                <button class="btn" onclick="getInput('-')">-</button><br>
+
+                <button class="btn" onclick="getInput(7)">7</button>
+                <button class="btn" onclick="getInput(8)">8</button>
+                <button class="btn" onclick="getInput(9)">9</button>
+                <button class="btn" onclick="getInput('+')">+</button><br>
+
+                <button class="btn" onclick="getInput(4)">4</button>
+                <button class="btn" onclick="getInput(5)">5</button>
+                <button class="btn" onclick="getInput(6)">6</button>
+                <button class="btn" onclick="getInput('*')">*</button><br>
+
+                <button class="btn" onclick="getInput(1)">1</button>
+                <button class="btn" onclick="getInput(2)">2</button>
+                <button class="btn" onclick="getInput(3)">3</button>
+                <button class="btn" onclick="getInput('/')">/</button><br>
+
+                <button class="btn" onclick="getInput('.')">.</button>
+                <button class="btn" onclick="getInput(0)">0</button>
+                <button class="btn-is" onclick="getInput('=')">=</button>
+            </div>
+
+        </div>
+
+        <footer>
+            &copy 2020 All Rights Reserved.
+        </footer>
+
+        <script src="JS/script.js"></script>
+    </body>
+</html>
+<!-- (Alternate method-I)
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Calculator</title>
+
+ <style type="text/css">
+  *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+  body{
+   background: #333;
+  }
+  .main{
+   background: #ccc;
+   text-align: center;
+   width: 400px;
+   margin: 80px auto;
+   padding: 30px;
+  }
+  form{
+   padding: 0 5px;
+   margin-bottom: 15px;
+  }
+  .textview{
+   width: 100%;
+   height: 40px;
+   padding: 0 10px;
+   pointer-events: none;
+  }
+  .clearfix:before, .clearfix:after{
+   content: '';
+   display: table;
+   clear: both;
+   width: 100%;
+  }
+  .col-3{
+   width: 25%;
+   padding: 5px;
+   float: left;
+  }
+  .col-6{
+   width: 50%;
+   padding: 5px;
+   float: left;
+  }
+  .button{
+   width: 100%;
+   height: 40px;
+   outline: none;
+  }
+  .button.top-button{
+   background: #6d4b7e;
+   border-color: #d6d6d6;
+   color: #fff;
+  }
+  .button.equal{
+   background: #ad3535;
+   color: #fff;
+   font-size: 22px;
+  }
+  .button.operator{
+   background: #20b2aa;
+   border-color: #d6d6d6;
+   color: #fff;
+   font-size: 20px;
+  }
+ </style>
+</head>
+<body>
+ <div class="main">
+
+  <form name="form">
+   <input type="text" name="textview" class="textview">
+  </form>
+
+  <div class="clearfix">
+   <div class="col-3"><input type="button" value="C" class="button top-button" onclick="clean('');"></div>
+   <div class="col-3"><input type="button" value="&#8756;" class="button top-button"></div>
+   <div class="col-3"><input type="button" value="Del" class="button top-button" onclick="back('');"></div>
+   <div class="col-3"><input type="button" value="&#247;" class="button operator" onclick="insert('/')"></div>
+  </div>
+
+  <div class="clearfix">
+   <div class="col-3"><input type="button" value="7" class="button" onclick="insert(7);"></div>
+   <div class="col-3"><input type="button" value="8" class="button" onclick="insert(8);"></div>
+   <div class="col-3"><input type="button" value="9" class="button" onclick="insert(9);"></div>
+   <div class="col-3"><input type="button" value="&#215;" class="button operator" onclick="insert('*');"></div>
+  </div>
+
+  <div class="clearfix">
+   <div class="col-3"><input type="button" value="4" class="button" onclick="insert(4);"></div>
+   <div class="col-3"><input type="button" value="5" class="button" onclick="insert(5);"></div>
+   <div class="col-3"><input type="button" value="6" class="button" onclick="insert(6);"></div>
+   <div class="col-3"><input type="button" value="&#8722;" class="button operator" onclick="insert('-');"></div>
+  </div>
+
+  <div class="clearfix">
+   <div class="col-3"><input type="button" value="1" class="button" onclick="insert(1);"></div>
+   <div class="col-3"><input type="button" value="2" class="button" onclick="insert(2);"></div>
+   <div class="col-3"><input type="button" value="3" class="button" onclick="insert(3);"></div>
+   <div class="col-3"><input type="button" value="&#43;" class="button operator" onclick="insert('+');"></div>
+  </div>
+
+  <div class="clearfix">
+   <div class="col-3"><input type="button" value="." class="button" onclick="insert('.');"></div>
+   <div class="col-3"><input type="button" value="0" class="button" onclick="insert(0);"></div>
+   <div class="col-6"><input type="button" value="&#61;" class="button equal" onclick="equal('');"></div>
+  </div>
+  
+ </div> -->
+
+ <!-- Javascript Functions 
+ <script>
+  function insert(num){
+   var myString = document.form.textview.value;
+   var lastChar = myString[myString.length - 1];
+   if (myString.length < 30) {
+    if (!isNaN(lastChar) || lastChar == null || !isNaN(num)) {
+     document.form.textview.value = myString + num;
+    }else if(num != lastChar){
+     document.form.textview.value = myString.replace(lastChar, num);
+    }
+   }
+  }
+  function equal(''){
+   var sum = document.form.textview.value;
+   if (sum) {
+    document.form.textview.value = eval(sum);
+   }
+  }
+  function clean(''){
+   document.form.textview.value = '';
+  }
+  function back(''){
+   var exp = document.form.textview.value;
+   document.form.textview.value = exp.substring(0,exp.length - 1);
+  }
+ </script>
+
+</body>
+</html>  -->
+
+<!--_____________________________________________________________________________________________________________________________________-->
+
+
+<!-- (Alternate method-II)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/style.css" type="text/css">
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        <header>
+        <h1>A Simple Calculator</h1>
+        </header>
+
+        <form name="calc">
+            <input id="result" type="text" name="result"><br>
+
+            <input type="button" value="AC" onclick="document.calc.result.value=''">
+            <input type="button" value="C" onclick="document.calc.result.value+=''">
+            <input type="button" value="-" onclick="document.calc.result.value+='-'"><br>
+
+            <input type="button" value="7" onclick="document.calc.result.value+='7'">
+            <input type="button" value="8" onclick="document.calc.result.value+='8'">
+            <input type="button" value="9" onclick="document.calc.result.value+='9'">
+            <input type="button" value="+" onclick="document.calc.result.value+='+'"><br>
+
+            <input type="button" value="4" onclick="document.calc.result.value+='4'">
+            <input type="button" value="5" onclick="document.calc.result.value+='5'">
+            <input type="button" value="6" onclick="document.calc.result.value+='6'">
+            <input type="button" value="*" onclick="document.calc.result.value+='*'"><br>
+
+            <input type="button" value="1" onclick="document.calc.result.value+='1'">
+            <input type="button" value="2" onclick="document.calc.result.value+='2'">
+            <input type="button" value="3" onclick="document.calc.result.value+='3'">
+            <input type="button" value="/" onclick="document.calc.result.value+='/'"><br>
+
+            <input type="button" value="." onclick="document.calc.result.value+='.'">
+            <input type="button" value="0" onclick="document.calc.result.value+='0'">
+            <input type="button" value="=" onclick="document.calc.result.value= eval(document.calc.result.value)">
+        </form>
+
+    </body>
+</html> -->
