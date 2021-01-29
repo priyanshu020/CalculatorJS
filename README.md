@@ -8,3 +8,7 @@ This is a simple calculator.
 
 The purpose of this file is to provide basic structure of creating calculator using JavaScript.
 Also, some basic CSS stylings were applied to the project.
+
+## Deployment
+
+https://ecstatic-haibt-c1232a.netlify.app/
