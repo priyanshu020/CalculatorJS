@@ -11,4 +11,4 @@ Also, some basic CSS stylings were applied to the project.
 
 ## Deployment
 
-https://ecstatic-haibt-c1232a.netlify.app/
+https://simplecalculatorjavascript.netlify.app/
